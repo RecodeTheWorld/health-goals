@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Health Goals — Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Health Goals</h1>
+    <p class="tagline">Simple personal health & wellness tracker</p>
+  </header>
+
+  <main class="container">
+    <section class="card" id="water-section">
+      <h2>Water Intake</h2>
+      <div class="water-controls">
+        <div class="water-meta">
+          <div>Today: <strong id="water-current">0</strong> ml</div>
+          <div>Goal: <strong id="water-goal">2000</strong> ml</div>
+        </div>
+        <div class="water-actions">
+          <button data-add="250" class="btn">+250 ml</button>
+          <button data-add="500" class="btn">+500 ml</button>
+          <input id="water-custom" type="number" placeholder="ml" min="0" />
+          <button id="water-add-custom" class="btn primary">Add</button>
+        </div>
+        <div class="progress-wrap">
+          <div id="water-progress" class="progress"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="meals-section">
+      <h2>Meals & Nutrition</h2>
+      <form id="meal-form" class="inline-form">
+        <input id="meal-name" placeholder="Meal name" required />
+        <input id="meal-cal" type="number" placeholder="kcal" required />
+        <input id="meal-protein" type="number" placeholder="protein (g)" />
+        <button class="btn primary">Add Meal</button>
+      </form>
+      <ul id="meals-list" class="list"></ul>
+      <div class="nutrition-summary">Total calories: <strong id="total-cal">0</strong> kcal</div>
+    </section>
+
+    <section class="card" id="activity-section">
+      <h2>Activities & Workouts</h2>
+      <form id="activity-form" class="inline-form">
+        <input id="activity-name" placeholder="Activity" required />
+        <input id="activity-duration" type="number" placeholder="min" />
+        <input id="activity-cal" type="number" placeholder="kcal burned" />
+        <button class="btn primary">Add Activity</button>
+      </form>
+      <ul id="activities-list" class="list"></ul>
+    </section>
+
+    <section class="card" id="goals-section">
+      <h2>Custom Goals</h2>
+      <form id="goals-form" class="inline-form">
+        <label>Daily water (ml)
+          <input id="goal-water" type="number" min="0" />
+        </label>
+        <label>Daily calories (kcal)
+          <input id="goal-cal" type="number" min="0" />
+        </label>
+        <button class="btn primary">Save Goals</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">Built with a fresh green & calming white color scheme.</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

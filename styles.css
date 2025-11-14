@@ -1,0 +1,31 @@
+:root{
+  --bg: #ffffff;
+  --card: #f7fff7;
+  --accent: #2e8b57; /* fresh green */
+  --muted: #6b6b6b;
+  --accent-2: #dff7e6;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#083;line-height:1.35;margin:0}
+.app-header{background:linear-gradient(180deg,var(--accent-2),transparent);padding:20px 16px;border-bottom:1px solid #e6f3ea}
+.app-header h1{margin:0;color:var(--accent)}
+.tagline{margin:6px 0 0;color:var(--muted);font-size:0.95rem}
+.container{max-width:980px;margin:18px auto;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 1px 4px rgba(2,27,7,0.04)}
+h2{margin:0 0 10px;color:#0b5b3a}
+.inline-form{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.inline-form input{padding:8px;border-radius:8px;border:1px solid #e6f3ea;background:white}
+.inline-form label{display:flex;flex-direction:column;font-size:0.85rem;color:var(--muted)}
+.btn{padding:8px 12px;border-radius:8px;border:1px solid transparent;background:#eef9f2;color:var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:white}
+.btn:active{transform:translateY(1px)}
+.list{list-style:none;padding:0;margin:0 0 8px}
+.list li{padding:8px;border-radius:6px;background:white;margin-bottom:8px;border:1px solid #f0f7f2}
+.nutrition-summary{font-size:0.95rem;color:var(--muted)}
+.water-controls{display:flex;flex-direction:column;gap:10px}
+.water-actions{display:flex;gap:8px;align-items:center}
+.progress-wrap{height:12px;background:#fff;border-radius:8px;border:1px solid #eef6ee;overflow:hidden}
+.progress{height:100%;width:0;background:linear-gradient(90deg,var(--accent),#3db07b)}
+.water-meta{display:flex;gap:14px;font-size:0.95rem;color:var(--muted)}
+.app-footer{text-align:center;padding:16px;color:var(--muted);font-size:0.9rem}
+@media (max-width:520px){.inline-form{flex-direction:column;align-items:stretch}}
